@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.runners.JUnit4;
 
-public class BitCountingTest {
+public class Teste {
   @Test
   public void testGame() {
     assertEquals(5, BitCounting.countBits(1234));
