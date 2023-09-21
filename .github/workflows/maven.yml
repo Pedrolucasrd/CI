@@ -23,3 +23,11 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run Tests
       run: mvn test
+
+    # Adicione uma etapa para verificar se os testes passaram
+    - name: Check Test Results
+      run: |
+        if [ $? -ne 0 ]; then
+          echo "Testes falharam. O fluxo de trabalho será marcado como falha."
+          exit 1
+        fi
