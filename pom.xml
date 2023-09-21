@@ -16,6 +16,8 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
+		<start-class>com.example.demo.DemoApplication</start-class>
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -62,6 +64,31 @@
 
 	<build>
 		<plugins>
+			<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+		</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.baeldung.demo.DemoApplication</mainClass>
+					<layout>JAR</layout>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.example.demo.DemoApplication</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
 
 		</plugins>
 	</build>

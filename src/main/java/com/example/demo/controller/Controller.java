@@ -7,6 +7,6 @@ public class Controller {
 
     @GetMapping("/teste-cd")
     public String testeCd(){
-        return "Teste bem sucedido";
+        return "Teste bem sucedido!";
     }
 }
