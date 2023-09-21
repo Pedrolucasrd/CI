@@ -23,3 +23,12 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run Tests
       run: mvn test
+
+    # Armazene o resultado dos testes em uma variável
+    - name: Check Test Results
+      run: |
+        TEST_RESULT=$?
+        if [ $TEST_RESULT -ne 0 ]; then
+          echo "Testes falharam. O fluxo de trabalho será marcado como falha."
+          exit 1
+        fi
