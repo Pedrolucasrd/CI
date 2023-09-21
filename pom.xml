@@ -18,6 +18,8 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<!-- https://mvnrepository.com/artifact/com.github.ferstl/depgraph-maven-plugin -->
+
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
