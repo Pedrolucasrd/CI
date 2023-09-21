@@ -21,6 +21,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.ferstl/depgraph-maven-plugin -->
+		<dependency>
+			<groupId>com.github.ferstl</groupId>
+			<artifactId>depgraph-maven-plugin</artifactId>
+			<version>4.0.2</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
