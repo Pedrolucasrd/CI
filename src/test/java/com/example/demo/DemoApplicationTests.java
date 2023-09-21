@@ -8,6 +8,8 @@ class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
+		Teste teste = new Teste();
+		teste.testGame();
 	}
 
 }
