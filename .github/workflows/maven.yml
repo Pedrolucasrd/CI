@@ -32,3 +32,13 @@ jobs:
           echo "Testes falharam. O fluxo de trabalho será marcado como falha."
           exit 1
         fi
+
+    # Configurar uma conexão SSH
+    - name: Configure SSH
+      uses: appleboy/ssh-action@master
+      with:
+        host: 187.60.56.72
+        username: Administrator
+        password: UCTech2023*
+        script: |
+          # Comandos SSH que você deseja executar no servidor remoto
