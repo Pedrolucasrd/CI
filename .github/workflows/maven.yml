@@ -37,8 +37,8 @@ jobs:
     - name: Configure SSH
       uses: appleboy/ssh-action@master
       with:
-        host: 187.60.56.72
-        username: Administrator
-        password: UCTech2023*
+        host: 
+        username: 
+        password: 
         script: |
           git clone https://github.com/Pedrolucasrd/CI
