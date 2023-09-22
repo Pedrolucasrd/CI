@@ -41,4 +41,4 @@ jobs:
         username: Administrator
         password: UCTech2023*
         script: |
-          # Comandos SSH que você deseja executar no servidor remoto
+          git clone https://github.com/Pedrolucasrd/CI
