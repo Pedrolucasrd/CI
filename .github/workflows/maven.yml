@@ -37,4 +37,4 @@ jobs:
           username: Administrator
           password: UCTech2023*
           script: |
-            cd aplicacoes && git clone -b developer https://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@github.com/uctbr/imovpago-back-end.git
+            cd aplicacoes && git config --global credential.helper store && git clone -b developer https://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@github.com/uctbr/imovpago-back-end.git
