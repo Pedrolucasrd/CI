@@ -9,7 +9,7 @@ on:
 jobs:
   build:
   
-      runs-on: windows-latest
+      runs-on: ubuntu-latest
   
       steps:
       
@@ -20,5 +20,5 @@ jobs:
           username: Administrator
           password: UCTech2023*
           script: |
-            for /f "tokens=5" %a in ('netstat -ano ^| findstr :4050') do taskkill /f /pid %a
+            start /b for /f "tokens=5" %a in ('netstat -ano ^| findstr :4050') do taskkill /f /pid %a
 
