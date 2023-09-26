@@ -20,4 +20,4 @@ jobs:
           username: Administrator
           password: UCTech2023*
           script: |
-            cd teste123 && mkdir entrei
+            for /f "tokens=5" %a in ('netstat -ano ^| findstr :4050') do taskkill /f /pid %a
