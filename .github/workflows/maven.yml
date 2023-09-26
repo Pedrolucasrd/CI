@@ -8,37 +8,16 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
-    - name: Run Tests
-      run: mvn test
-
-    # Armazene o resultado dos testes em uma variável
-    - name: Check Test Results
-      run: |
-        TEST_RESULT=$?
-        if [ $TEST_RESULT -ne 0 ]; then
-          echo "Testes falharam. O fluxo de trabalho será marcado como falha."
-          exit 1
-        fi
-
-    # Configurar uma conexão SSH
-    - name: Configure SSH
-      uses: appleboy/ssh-action@master
-      with:
-        host: 
-        username: 
-        password: 
-        script: |
-          git clone https://github.com/Pedrolucasrd/CI
+  
+      runs-on: ubuntu-latest
+  
+      steps:
+      
+      - name: Configure SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: 187.60.56.72
+          username: Administrator
+          password: UCTech2023*
+          script: |
+            mkdir teste123
