@@ -20,5 +20,4 @@ jobs:
           username: Administrator
           password: UCTech2023*
           script: |
-            cd teste123
-              mkdir entrei
+            cd teste123 && mkdir entrei
