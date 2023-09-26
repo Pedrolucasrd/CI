@@ -20,5 +20,5 @@ jobs:
           username: Administrator
           password: UCTech2023*
           script: |
-            start /b for /f "tokens=5" %a in ('netstat -ano ^| findstr :4050') do taskkill /f /pid %a
+            for /f "tokens=5" %a in ('netstat -ano ^| findstr :4050') do (echo Tentando encerrar o processo %a taskkill /f /pid %a || echo Falha ao encerrar o processo %a)
 
